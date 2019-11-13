@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  PJLiveVideoPlaying
+//
+//  Created by 周鹏钜 on 2019/11/6.
+//  Copyright © 2019 zhoupengju. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+
+#import "Common_Color.h"
+#import "Common_Macro.h"
+#import "Common_LibMacro.h"
+#import "Common_HeaderFile.h"
+#import "Common_Notification.h"
+
+#endif /* PrefixHeader_pch */

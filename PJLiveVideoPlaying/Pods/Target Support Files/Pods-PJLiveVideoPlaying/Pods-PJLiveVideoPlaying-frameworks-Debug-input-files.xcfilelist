@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-PJLiveVideoPlaying/Pods-PJLiveVideoPlaying-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework
+${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework

@@ -1,0 +1,6 @@
+framework module Pods_PJLiveVideoPlayingTests {
+  umbrella header "Pods-PJLiveVideoPlayingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
