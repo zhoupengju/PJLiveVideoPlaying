@@ -23,21 +23,10 @@
 
 - (void)initParamConfig {
     
-    self.value = 0.0f;
-    self.continuous = NO; 
-    self.minimumValue = 0.0f;
-    self.maximumValue = 1.0f;
+    [self setThumbImage:[UIImage imageNamed:@"player-slider_spot"] forState:UIControlStateNormal];
+    self.minimumTrackTintColor = [UIColor colorWithWhite:1 alpha:0.6];
+    self.maximumTrackTintColor = [UIColor clearColor];
     
-    [self setMaximumTrackImage:[UIImage imageWithColor:[UIColor clearColor] withFrame:CGRectMake(0, 0, kWIDTH, kPlayProgressBarHeight)] forState:UIControlStateNormal];
-
-    [self setMinimumTrackImage:[UIImage imageNamed:@"slider"] forState:UIControlStateNormal];
-    
-    [self setThumbImage:[UIImage imageNamed:@"player-slider-handle"] forState:UIControlStateNormal];
-    
-}
-
--(CGRect)trackRectForBounds:(CGRect)bounds{
-    return CGRectMake(2, (bounds.size.height-kPlayProgressBarHeight)*0.5-0.25, bounds.size.width, kPlayProgressBarHeight);
 }
 
 @end

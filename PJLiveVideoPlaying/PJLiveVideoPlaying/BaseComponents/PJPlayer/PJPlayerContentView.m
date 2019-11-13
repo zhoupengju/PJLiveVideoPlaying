@@ -8,6 +8,7 @@
 
 #import "PJPlayerContentView.h"
 #import "PJLiveVideoProgressView.h"
+#import "PJLiveVideoSingleSlider.h"
 
 @interface PJPlayerContentView () <PJPlayerHandleDelegate, PJLiveVideoProgressViewDelegate>
 {
@@ -159,18 +160,16 @@
     
     [buttonPause setImage:[UIImage imageNamed:@"pauseButton"] forState:UIControlStateNormal];
     [buttonPause setImage:[UIImage imageNamed:@"playButton"] forState:UIControlStateSelected];
-    
+
     PJLiveVideoProgressView *viewSlideProgress = [[PJLiveVideoProgressView alloc] init];
-    _viewSlideProgress = viewSlideProgress;
     [self addSubview:viewSlideProgress];
     
     viewSlideProgress.delegate = self;
     
     [viewSlideProgress mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(buttonPause.mas_right).offset(63);
-        make.right.mas_equalTo(self.mas_right).offset(-112);
+        make.left.mas_equalTo(buttonPause.mas_right).offset(55);
+        make.right.mas_equalTo(self.mas_right).offset(-106);
         make.centerY.mas_equalTo(buttonFullScreen.mas_centerY);
-        make.height.mas_equalTo(kPlayProgressBarHeight);
     }];
     
     UILabel *labelTimeCurrent = [UILabel pj_labelWithFont:12 color:kWhile superView:self constraints:^(MASConstraintMaker *make) {
@@ -352,6 +351,10 @@
 
 #pragma mark - PJPlayerHandleDelegate
 - (void)PJPlayerHandle:(PJBasePlayer *)player TotalTime:(CGFloat)time {
+    if (time <= 0.0) {
+        time = 1.0;
+    }
+    
     totalTime = time;
     self.labelTimeTotal.text = [NSString formatSecondsToString:time];
 }
@@ -363,6 +366,7 @@
 
 - (void)PJPlayerHandle:(PJBasePlayer *)player LoadTime:(CGFloat)time {
 //    NSLog(@"LoadTime= %f", time);
+
     self.viewSlideProgress.cacheProgressValue = time/totalTime;
 }
 
@@ -375,27 +379,6 @@
 
 - (void)PJLiveVideoProgressViewSliderMoving:(PJLiveVideoSlider *)slider {
     self.labelTimeCurrent.text = [NSString formatSecondsToString:slider.value * totalTime];
-    
-//    if (self.playerHandle.isPlaying) {
-//        [self.playerHandle pause];
-//    }
-//
-//    StartLog(@"%f", currentValue);
-//
-//    CMTime seekTime = CMTimeMake(currentValue, self.playerHandle.player.currentItem.asset.duration.timescale);
-//
-//    [self.playerHandle.player seekToTime:CMTimeMakeWithSeconds(self.playerHandle.player.currentItem.asset.duration.timescale * currentValue, NSEC_PER_SEC) toleranceBefore:CMTimeMake(1, 1000) toleranceAfter:CMTimeMake(1, 1000) completionHandler:^(BOOL finished) {
-//        if (finished) {
-//            [self.playerHandle play];
-//        }
-//    }];
-
-    
-//    [self.playerHandle.player seekToTime:seekTime completionHandler:^(BOOL finished) {
-//        if (finished) {
-//            [self.playerHandle play];
-//        }
-//    }];
 }
 
 - (void)PJLiveVideoProgressViewSliderEnd:(PJLiveVideoSlider *)slider {
@@ -403,8 +386,8 @@
         return;
     }
 
-    CMTime dragedCMTime = CMTimeMakeWithSeconds(totalTime * slider.value, 600);
-    [self.playerHandle.player seekToTime:dragedCMTime toleranceBefore:CMTimeMake(1, 1000) toleranceAfter:CMTimeMake(1, 1000) completionHandler:^(BOOL finished) {
+    CMTime dragedCMTime = CMTimeMakeWithSeconds(totalTime * slider.value, 1000);
+    [self.playerHandle.player seekToTime:dragedCMTime toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
         if (finished) {
             [self.playerHandle.player play];
         }

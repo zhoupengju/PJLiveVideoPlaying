@@ -11,9 +11,7 @@
 
 @interface PJLiveVideoProgressView ()
 
-@property (nonatomic, strong) UIView *viewProgressBg;   //! < 背景颜色
-
-@property (nonatomic, strong) UIView *viewCacheProgress;    //! < 缓存进度颜色
+@property (nonatomic, strong) UIProgressView *progressView; //! < 进度条
 
 @end
 
@@ -39,42 +37,17 @@
 
 - (void)createContainerView {
     
-    // 背景颜色
-    UIView *viewProgressBg = [[UIView alloc] init];
-    [self addSubview:viewProgressBg];
-    _viewProgressBg = viewProgressBg;
+    UIProgressView *progressView = [[UIProgressView alloc]init];
+    [self addSubview:progressView];
+    _progressView = progressView;
     
-    viewProgressBg.backgroundColor = [UIColor grayColor];
+    progressView.progressTintColor = [UIColor colorWithWhite:1 alpha:0.3];
+    progressView.trackTintColor  = [UIColor colorWithRed:81/255.0 green:81/255.0 blue:81/255.0 alpha:0.5];
     
-    [viewProgressBg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self);
+    [progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self.mas_right);
+        make.centerY.mas_equalTo(self.mas_centerY).offset(1);
     }];
-    
-    // 缓存进度
-    UIView *viewCacheProgress = [[UIView alloc] init];
-    [self addSubview:viewCacheProgress];
-    _viewCacheProgress = viewCacheProgress;
-
-    viewCacheProgress.backgroundColor = [UIColor whiteColor];
-
-    [viewCacheProgress mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.bottom.equalTo(self);
-        make.width.equalTo(self.mas_width).multipliedBy(0.0);
-    }];
-
-    PJLiveVideoSlider *viewSlider = [[PJLiveVideoSlider alloc] init];
-    [self addSubview:viewSlider];
-    _viewSlider = viewSlider;
-
-    [viewSlider mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self);
-    }];
-
-    [viewSlider addTarget:self action:@selector(sliderDurationEnded:) forControlEvents: UIControlEventValueChanged];
-    
-        [viewSlider addTarget:self action:@selector(sliderDurationMoving:) forControlEvents:UIControlEventValueChanged];
-
-    [viewSlider addTarget:self action:@selector(sliderDurationBeginTouch:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchCancel | UIControlEventTouchUpOutside];
 }
 
 #pragma mark - 外部方法
@@ -82,13 +55,7 @@
 - (void)setCacheProgressValue:(CGFloat)cacheProgressValue {
     _cacheProgressValue = cacheProgressValue;
     
-    if([[NSString stringWithFormat:@"%.3f", cacheProgressValue] floatValue] != 0){
-
-        [self.viewCacheProgress mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.bottom.equalTo(self);
-            make.width.equalTo(self.mas_width).multipliedBy(cacheProgressValue);
-        }];
-    }
+    [_progressView setProgress:cacheProgressValue animated:YES];
 }
 
 #pragma mark - 内部方法
