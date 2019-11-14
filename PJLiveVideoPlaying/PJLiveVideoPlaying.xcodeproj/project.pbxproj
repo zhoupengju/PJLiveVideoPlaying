@@ -80,11 +80,11 @@
 		CB2DC4C62378654B008810D3 /* iosxx_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2DC4822378654B008810D3 /* iosxx_2@2x.png */; };
 		CB2DC4C72378654B008810D3 /* iosxx_2_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2DC4832378654B008810D3 /* iosxx_2_on@2x.png */; };
 		CB2DC4C82378654B008810D3 /* PJVideoPlayingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DC4862378654B008810D3 /* PJVideoPlayingController.m */; };
-		CB665142237C10D100FDF045 /* PJLiveVideoSingleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CB665141237C10D100FDF045 /* PJLiveVideoSingleSlider.m */; };
 		CB665145237C11E100FDF045 /* player-slider_spot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB665143237C11E100FDF045 /* player-slider_spot@2x.png */; };
 		CB665146237C11E100FDF045 /* player-slider_spot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB665144237C11E100FDF045 /* player-slider_spot@3x.png */; };
 		CB66514E237C404700FDF045 /* pauseButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB66514D237C404700FDF045 /* pauseButton@3x.png */; };
 		CB665150237C405000FDF045 /* playButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB66514F237C405000FDF045 /* playButton@3x.png */; };
+		CBA4DFC3237D4F5F00021676 /* PJPlayerFailedContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA4DFC2237D4F5F00021676 /* PJPlayerFailedContentPage.m */; };
 		CBD2A0302379345500D06802 /* PJLiveVideoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A02F2379345500D06802 /* PJLiveVideoSlider.m */; };
 		CBD2A0332379357F00D06802 /* PJLiveVideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A0322379357F00D06802 /* PJLiveVideoProgressView.m */; };
 		CBD2A0452379501600D06802 /* NSString+PJVideoPlayingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A0442379501600D06802 /* NSString+PJVideoPlayingTimer.m */; };
@@ -232,12 +232,12 @@
 		CB2DC4832378654B008810D3 /* iosxx_2_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosxx_2_on@2x.png"; sourceTree = "<group>"; };
 		CB2DC4852378654B008810D3 /* PJVideoPlayingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJVideoPlayingController.h; sourceTree = "<group>"; };
 		CB2DC4862378654B008810D3 /* PJVideoPlayingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJVideoPlayingController.m; sourceTree = "<group>"; };
-		CB665140237C10D100FDF045 /* PJLiveVideoSingleSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoSingleSlider.h; sourceTree = "<group>"; };
-		CB665141237C10D100FDF045 /* PJLiveVideoSingleSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoSingleSlider.m; sourceTree = "<group>"; };
 		CB665143237C11E100FDF045 /* player-slider_spot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player-slider_spot@2x.png"; sourceTree = "<group>"; };
 		CB665144237C11E100FDF045 /* player-slider_spot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player-slider_spot@3x.png"; sourceTree = "<group>"; };
 		CB66514D237C404700FDF045 /* pauseButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pauseButton@3x.png"; sourceTree = "<group>"; };
 		CB66514F237C405000FDF045 /* playButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@3x.png"; sourceTree = "<group>"; };
+		CBA4DFC1237D4F5F00021676 /* PJPlayerFailedContentPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJPlayerFailedContentPage.h; sourceTree = "<group>"; };
+		CBA4DFC2237D4F5F00021676 /* PJPlayerFailedContentPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJPlayerFailedContentPage.m; sourceTree = "<group>"; };
 		CBD2A02E2379345500D06802 /* PJLiveVideoSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoSlider.h; sourceTree = "<group>"; };
 		CBD2A02F2379345500D06802 /* PJLiveVideoSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoSlider.m; sourceTree = "<group>"; };
 		CBD2A0312379357F00D06802 /* PJLiveVideoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoProgressView.h; sourceTree = "<group>"; };
@@ -585,8 +585,8 @@
 				CBD2A02F2379345500D06802 /* PJLiveVideoSlider.m */,
 				CBD2A0312379357F00D06802 /* PJLiveVideoProgressView.h */,
 				CBD2A0322379357F00D06802 /* PJLiveVideoProgressView.m */,
-				CB665140237C10D100FDF045 /* PJLiveVideoSingleSlider.h */,
-				CB665141237C10D100FDF045 /* PJLiveVideoSingleSlider.m */,
+				CBA4DFC1237D4F5F00021676 /* PJPlayerFailedContentPage.h */,
+				CBA4DFC2237D4F5F00021676 /* PJPlayerFailedContentPage.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -896,6 +896,7 @@
 				CB2DC48A2378654B008810D3 /* UIView+PJMasonryKit.m in Sources */,
 				CB2DC4902378654B008810D3 /* UISlider+PJHelperBlocksKit.m in Sources */,
 				CB2DC4932378654B008810D3 /* PJVideoPlayingController+RoTransition.m in Sources */,
+				CBA4DFC3237D4F5F00021676 /* PJPlayerFailedContentPage.m in Sources */,
 				CB2DC4C82378654B008810D3 /* PJVideoPlayingController.m in Sources */,
 				CB2DC4892378654B008810D3 /* UITextField+PJMasonryKit.m in Sources */,
 				CB2DC4942378654B008810D3 /* UIImage+Extension.m in Sources */,
@@ -908,7 +909,6 @@
 				CB2DC48F2378654B008810D3 /* UIButton+PJHelperBlocksKit.m in Sources */,
 				CB2DC49B2378654B008810D3 /* PJLiveVideoPlayingBaseController.m in Sources */,
 				CBD2A0302379345500D06802 /* PJLiveVideoSlider.m in Sources */,
-				CB665142237C10D100FDF045 /* PJLiveVideoSingleSlider.m in Sources */,
 				CB024258233A450200619B68 /* main.m in Sources */,
 				CB2DC49A2378654B008810D3 /* PJNavigationBaseController.m in Sources */,
 				CB2DC4982378654B008810D3 /* PJBasePlayer.m in Sources */,

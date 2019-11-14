@@ -56,7 +56,7 @@ typedef NS_ENUM(NSUInteger, PJPlayerHandleState) {
 
 @property (nonatomic, copy) NSString *playUrl;
 
-@property (nonatomic, assign, readonly) BOOL isPlaying; //!< 是否正在播放
+@property (nonatomic, assign) BOOL isPlaying; //!< 是否正在播放
 
 @property (nonatomic, assign, readonly) BOOL isBuffering;//!< 是否在缓冲
 

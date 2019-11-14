@@ -70,7 +70,7 @@
         
         [_player play];
         
-        _isPlaying = YES;
+        self.isPlaying = YES;
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(PJPlayerHandle:State:)]) {
             [self.delegate PJPlayerHandle:_player State:PJPlayerHandleStatePlaying];
@@ -81,7 +81,7 @@
 - (void)pause {
     
     if (_isPlaying) {
-        _isPlaying = NO;
+        self.isPlaying = NO;
         
         [_player pause];
         
@@ -93,7 +93,7 @@
 
 - (void)stop {
     
-    _isPlaying = NO;
+    self.isPlaying = NO;
     [_player pause];
     
     [self removeTimeObserver];
@@ -244,6 +244,10 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayStalledEnd:) name:AVPlayerItemPlaybackStalledNotification object:_playerItemStatus]; // AVPlayer播放中断通知
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayEndTimeErrorEnd:) name:AVPlayerItemFailedToPlayToEndTimeErrorKey object:_playerItemStatus];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayEndTimeNewErrorLogEntry:) name:AVPlayerItemNewErrorLogEntryNotification object:_playerItemStatus];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_playerItemStatus]; // AVPlayer播放完成通知
     
     [_playerItemStatus addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil]; // 监听播放状态
@@ -276,7 +280,7 @@
 #pragma mark - 播放器配置
 - (void)initParamConfig {
     
-    _isPlaying = NO;
+    self.isPlaying = NO;
     _isBuffering = NO;
     
     [[AVAudioSession sharedInstance] setActive:YES error:nil];
@@ -286,7 +290,7 @@
 - (void)moviePlayDidEnd:(NSNotification *)noti {
     [self.player seekToTime:kCMTimeZero];
     
-    _isPlaying = NO;
+    self.isPlaying = NO;
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(PJPlayerHandle:State:)]) {
         [self.delegate PJPlayerHandle:_player State:PJPlayerHandleStateStop];
@@ -294,11 +298,20 @@
 }
 
 - (void)moviePlayFailedEnd:(NSNotification *)noti {
-    
+    StartLog(@"moviePlayFailedEnd");
 }
 
 - (void)moviePlayStalledEnd:(NSNotification *)noti {
-    
+    StartLog(@"moviePlayStalledEnd");
+    [self play];
+}
+
+- (void)moviePlayEndTimeErrorEnd:(NSNotification *)noti {
+    StartLog(@"moviePlayEndTimeErrorEnd");
+}
+
+- (void)moviePlayEndTimeNewErrorLogEntry:(NSNotification *)noti {
+    StartLog(@"moviePlayEndTimeNewErrorLogEntry");
 }
 
 #pragma mark - 创建布局控件
