@@ -84,9 +84,12 @@
 		CB665146237C11E100FDF045 /* player-slider_spot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB665144237C11E100FDF045 /* player-slider_spot@3x.png */; };
 		CB66514E237C404700FDF045 /* pauseButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB66514D237C404700FDF045 /* pauseButton@3x.png */; };
 		CB665150237C405000FDF045 /* playButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB66514F237C405000FDF045 /* playButton@3x.png */; };
+		CB7C9CC9238A342200F9798E /* PJLiveVideoSDWebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C9CC8238A342200F9798E /* PJLiveVideoSDWebImageController.m */; };
+		CBA1B106237D626300A055E9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA1B0FD237D626200A055E9 /* Reachability.m */; };
+		CBA1B107237D626300A055E9 /* NetWorkSpeedMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA1B0FE237D626200A055E9 /* NetWorkSpeedMonitor.m */; };
+		CBA1B108237D626300A055E9 /* PJLiveVideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA1B102237D626200A055E9 /* PJLiveVideoProgressView.m */; };
+		CBA1B109237D626300A055E9 /* PJLiveVideoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA1B103237D626200A055E9 /* PJLiveVideoSlider.m */; };
 		CBA4DFC3237D4F5F00021676 /* PJPlayerFailedContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA4DFC2237D4F5F00021676 /* PJPlayerFailedContentPage.m */; };
-		CBD2A0302379345500D06802 /* PJLiveVideoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A02F2379345500D06802 /* PJLiveVideoSlider.m */; };
-		CBD2A0332379357F00D06802 /* PJLiveVideoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A0322379357F00D06802 /* PJLiveVideoProgressView.m */; };
 		CBD2A0452379501600D06802 /* NSString+PJVideoPlayingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD2A0442379501600D06802 /* NSString+PJVideoPlayingTimer.m */; };
 		CBD2A04A2379684C00D06802 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD2A0492379684C00D06802 /* slider.png */; };
 		CBD2A04D2379686700D06802 /* player-slider-handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD2A04B2379686700D06802 /* player-slider-handle@2x.png */; };
@@ -236,12 +239,18 @@
 		CB665144237C11E100FDF045 /* player-slider_spot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player-slider_spot@3x.png"; sourceTree = "<group>"; };
 		CB66514D237C404700FDF045 /* pauseButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pauseButton@3x.png"; sourceTree = "<group>"; };
 		CB66514F237C405000FDF045 /* playButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playButton@3x.png"; sourceTree = "<group>"; };
+		CB7C9CC7238A342200F9798E /* PJLiveVideoSDWebImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoSDWebImageController.h; sourceTree = "<group>"; };
+		CB7C9CC8238A342200F9798E /* PJLiveVideoSDWebImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoSDWebImageController.m; sourceTree = "<group>"; };
+		CBA1B0FD237D626200A055E9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CBA1B0FE237D626200A055E9 /* NetWorkSpeedMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkSpeedMonitor.m; sourceTree = "<group>"; };
+		CBA1B0FF237D626200A055E9 /* NetWorkSpeedMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkSpeedMonitor.h; sourceTree = "<group>"; };
+		CBA1B100237D626200A055E9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CBA1B102237D626200A055E9 /* PJLiveVideoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoProgressView.m; sourceTree = "<group>"; };
+		CBA1B103237D626200A055E9 /* PJLiveVideoSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoSlider.m; sourceTree = "<group>"; };
+		CBA1B104237D626200A055E9 /* PJLiveVideoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoProgressView.h; sourceTree = "<group>"; };
+		CBA1B105237D626200A055E9 /* PJLiveVideoSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoSlider.h; sourceTree = "<group>"; };
 		CBA4DFC1237D4F5F00021676 /* PJPlayerFailedContentPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJPlayerFailedContentPage.h; sourceTree = "<group>"; };
 		CBA4DFC2237D4F5F00021676 /* PJPlayerFailedContentPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJPlayerFailedContentPage.m; sourceTree = "<group>"; };
-		CBD2A02E2379345500D06802 /* PJLiveVideoSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoSlider.h; sourceTree = "<group>"; };
-		CBD2A02F2379345500D06802 /* PJLiveVideoSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoSlider.m; sourceTree = "<group>"; };
-		CBD2A0312379357F00D06802 /* PJLiveVideoProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJLiveVideoProgressView.h; sourceTree = "<group>"; };
-		CBD2A0322379357F00D06802 /* PJLiveVideoProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PJLiveVideoProgressView.m; sourceTree = "<group>"; };
 		CBD2A0432379501600D06802 /* NSString+PJVideoPlayingTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+PJVideoPlayingTimer.h"; sourceTree = "<group>"; };
 		CBD2A0442379501600D06802 /* NSString+PJVideoPlayingTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+PJVideoPlayingTimer.m"; sourceTree = "<group>"; };
 		CBD2A0492379684C00D06802 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
@@ -327,6 +336,7 @@
 			children = (
 				CB2DC4842378654B008810D3 /* VideoPlaying */,
 				CB2DC4192378654A008810D3 /* My */,
+				CB7C9CC6238A33B100F9798E /* SDWebImage */,
 				CB2DC41C2378654B008810D3 /* BaseComponents */,
 				CB2DC4492378654B008810D3 /* BaseClassUnits */,
 				CB2DC45A2378654B008810D3 /* Resource */,
@@ -578,15 +588,44 @@
 			path = VideoPlaying;
 			sourceTree = "<group>";
 		};
+		CB7C9CC6238A33B100F9798E /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				CB7C9CC7238A342200F9798E /* PJLiveVideoSDWebImageController.h */,
+				CB7C9CC8238A342200F9798E /* PJLiveVideoSDWebImageController.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		CBA1B0FC237D626200A055E9 /* NetWorkSpeedMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				CBA1B100237D626200A055E9 /* Reachability.h */,
+				CBA1B0FD237D626200A055E9 /* Reachability.m */,
+				CBA1B0FF237D626200A055E9 /* NetWorkSpeedMonitor.h */,
+				CBA1B0FE237D626200A055E9 /* NetWorkSpeedMonitor.m */,
+			);
+			path = NetWorkSpeedMonitor;
+			sourceTree = "<group>";
+		};
+		CBA1B101237D626200A055E9 /* PJSliderProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				CBA1B105237D626200A055E9 /* PJLiveVideoSlider.h */,
+				CBA1B103237D626200A055E9 /* PJLiveVideoSlider.m */,
+				CBA1B104237D626200A055E9 /* PJLiveVideoProgressView.h */,
+				CBA1B102237D626200A055E9 /* PJLiveVideoProgressView.m */,
+			);
+			path = PJSliderProgressView;
+			sourceTree = "<group>";
+		};
 		CBD2A02D2379341600D06802 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CBD2A02E2379345500D06802 /* PJLiveVideoSlider.h */,
-				CBD2A02F2379345500D06802 /* PJLiveVideoSlider.m */,
-				CBD2A0312379357F00D06802 /* PJLiveVideoProgressView.h */,
-				CBD2A0322379357F00D06802 /* PJLiveVideoProgressView.m */,
 				CBA4DFC1237D4F5F00021676 /* PJPlayerFailedContentPage.h */,
 				CBA4DFC2237D4F5F00021676 /* PJPlayerFailedContentPage.m */,
+				CBA1B101237D626200A055E9 /* PJSliderProgressView */,
+				CBA1B0FC237D626200A055E9 /* NetWorkSpeedMonitor */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -893,7 +932,10 @@
 				CB2DC4912378654B008810D3 /* PJCommonKit.m in Sources */,
 				CB2DC4972378654B008810D3 /* PJBasePlayerItem.m in Sources */,
 				CB2DC4A02378654B008810D3 /* PJMainPageManger.m in Sources */,
+				CBA1B107237D626300A055E9 /* NetWorkSpeedMonitor.m in Sources */,
 				CB2DC48A2378654B008810D3 /* UIView+PJMasonryKit.m in Sources */,
+				CB7C9CC9238A342200F9798E /* PJLiveVideoSDWebImageController.m in Sources */,
+				CBA1B108237D626300A055E9 /* PJLiveVideoProgressView.m in Sources */,
 				CB2DC4902378654B008810D3 /* UISlider+PJHelperBlocksKit.m in Sources */,
 				CB2DC4932378654B008810D3 /* PJVideoPlayingController+RoTransition.m in Sources */,
 				CBA4DFC3237D4F5F00021676 /* PJPlayerFailedContentPage.m in Sources */,
@@ -904,18 +946,18 @@
 				CB2DC4922378654B008810D3 /* UIView+MBLayout.m in Sources */,
 				CB2DC4992378654B008810D3 /* PJPlayerContentView.m in Sources */,
 				CB2DC49E2378654B008810D3 /* PJLiveVideoMainTabBarManger.m in Sources */,
+				CBA1B109237D626300A055E9 /* PJLiveVideoSlider.m in Sources */,
 				CB2DC4882378654B008810D3 /* UILabel+PJMasonryKit.m in Sources */,
 				CB2DC4952378654B008810D3 /* UIBarButtonItem+Extension.m in Sources */,
 				CB2DC48F2378654B008810D3 /* UIButton+PJHelperBlocksKit.m in Sources */,
 				CB2DC49B2378654B008810D3 /* PJLiveVideoPlayingBaseController.m in Sources */,
-				CBD2A0302379345500D06802 /* PJLiveVideoSlider.m in Sources */,
 				CB024258233A450200619B68 /* main.m in Sources */,
 				CB2DC49A2378654B008810D3 /* PJNavigationBaseController.m in Sources */,
+				CBA1B106237D626300A055E9 /* Reachability.m in Sources */,
 				CB2DC4982378654B008810D3 /* PJBasePlayer.m in Sources */,
 				CB2DC48C2378654B008810D3 /* UIGestureRecognizer+PJHelperBlockKit.m in Sources */,
 				CB2DC4872378654B008810D3 /* PJLiveVideoMyController.m in Sources */,
 				CB2DC4962378654B008810D3 /* PJPlayerHandle.m in Sources */,
-				CBD2A0332379357F00D06802 /* PJLiveVideoProgressView.m in Sources */,
 				CB2DC48E2378654B008810D3 /* UIView+PJHelperBlockKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1084,6 +1126,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J64DXHBHS6;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = PJLiveVideoPlaying/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1107,6 +1150,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J64DXHBHS6;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = PJLiveVideoPlaying/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

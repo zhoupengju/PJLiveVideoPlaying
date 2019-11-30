@@ -10,6 +10,7 @@
 #import "PJVideoPlayingController.h"
 #import "PJNavigationBaseController.h"
 #import "PJLiveVideoMainTabBarManger.h"
+#import "PJLiveVideoSDWebImageController.h"
 
 @implementation PJLiveVideoMainTabBarManger
 
@@ -31,7 +32,11 @@
     PJNavigationBaseController *nav4 = [[PJNavigationBaseController alloc] initWithRootViewController:[[PJLiveVideoMyController alloc] init]];
     nav4.tabBarItem = items4;
     
-    tabbar.viewControllers = @[nav1, nav4];
+    UITabBarItem *items6 = [self createTabBar:4 withString:@"SDWebImage"];
+    PJNavigationBaseController *nav6 = [[PJNavigationBaseController alloc] initWithRootViewController:[[PJLiveVideoSDWebImageController alloc] init]];
+    nav6.tabBarItem = items6;
+    
+    tabbar.viewControllers = @[nav6, nav1, nav4];
     
     return tabbar;
 }

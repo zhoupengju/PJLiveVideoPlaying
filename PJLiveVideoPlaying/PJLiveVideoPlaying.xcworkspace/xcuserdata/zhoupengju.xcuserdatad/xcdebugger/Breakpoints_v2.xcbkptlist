@@ -14,10 +14,10 @@
             filePath = "PJLiveVideoPlaying/BaseComponents/PJPlayer/PJPlayerHandle.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
-            landmarkName = "-moviePlayFailedEnd:"
-            landmarkType = "7">
+            startingLineNumber = "307"
+            endingLineNumber = "307"
+            landmarkName = "PJPlayerHandle"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +30,10 @@
             filePath = "PJLiveVideoPlaying/BaseComponents/PJPlayer/PJPlayerHandle.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "310"
-            endingLineNumber = "310"
-            landmarkName = "-moviePlayEndTimeErrorEnd:"
-            landmarkType = "7">
+            startingLineNumber = "316"
+            endingLineNumber = "316"
+            landmarkName = "PJPlayerHandle"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,10 +46,10 @@
             filePath = "PJLiveVideoPlaying/BaseComponents/PJPlayer/PJPlayerHandle.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
-            landmarkName = "-moviePlayEndTimeNewErrorLogEntry:"
-            landmarkType = "7">
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "PJPlayerHandle"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

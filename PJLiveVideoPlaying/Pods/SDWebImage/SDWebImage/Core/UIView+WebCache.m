@@ -61,6 +61,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
     self.sd_imageURL = url;
     
+    // 如果没有设置为 延时设置占位图片, 就帮助控件设置占位图
     if (!(options & SDWebImageDelayPlaceholder)) {
         dispatch_main_async_safe(^{
             [self sd_setImage:placeholder imageData:nil basedOnClassOrViaCustomSetImageBlock:setImageBlock cacheType:SDImageCacheTypeNone imageURL:url];
@@ -68,7 +69,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
     }
     
     if (url) {
-        // reset the progress
+        // reset the progress   初始化加载进度
         NSProgress *imageProgress = objc_getAssociatedObject(self, @selector(sd_imageProgress));
         if (imageProgress) {
             imageProgress.totalUnitCount = 0;

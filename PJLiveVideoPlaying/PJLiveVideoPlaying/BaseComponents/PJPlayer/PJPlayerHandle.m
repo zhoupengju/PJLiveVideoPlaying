@@ -26,6 +26,8 @@
         
         //2. 创建布局控件
         [self createContainerControl];
+        
+        [self addCurrentClassNotification];
     }
     return self;
 }
@@ -172,6 +174,8 @@
             }
         }
     }];
+    
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -275,6 +279,10 @@
     [_playerItemStatus removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:_playerItemStatus];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 #pragma mark - 播放器配置
@@ -320,6 +328,23 @@
     self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
     self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill; 
     self.playerLayer.backgroundColor = [UIColor clearColor].CGColor;
+}
+
+- (void)addCurrentClassNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+               selector:@selector(appWillEnterForeground)
+                   name:UIApplicationWillEnterForegroundNotification
+                 object:nil];
+}
+
+- (void)appDidEnterBackground {
+    self.playerLayer.player = nil;
+}
+
+- (void)appWillEnterForeground {
+    self.playerLayer.player = self.player;
 }
 
 #pragma mark - dealloc

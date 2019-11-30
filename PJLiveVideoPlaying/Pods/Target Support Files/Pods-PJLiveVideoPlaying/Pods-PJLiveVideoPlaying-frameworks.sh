@@ -161,20 +161,30 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework"
+  install_framework "${PODS_ROOT}/ijkplayerssl/IJKMediaFrameworkWithSSL.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SJRouter/SJRouter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework"
+  install_framework "${PODS_ROOT}/ijkplayerssl/IJKMediaFrameworkWithSSL.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

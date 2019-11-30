@@ -13,7 +13,15 @@ target 'PJLiveVideoPlaying' do
   pod 'SJRouter'
   pod 'SJUIKit'
   pod 'SDWebImage'
+  pod 'AFNetworking'
+  pod 'SJVideoPlayer'
 
+  
+  pod 'SJBaseVideoPlayer/IJKPlayer'
+  pod 'ijkplayerssl', :git => 'https://gitee.com/changsanjiang/ijkplayer.git'
+  pod 'SJVideoPlayer'
+  
+  
   target 'PJLiveVideoPlayingTests' do
     inherit! :search_paths
     # Pods for testing

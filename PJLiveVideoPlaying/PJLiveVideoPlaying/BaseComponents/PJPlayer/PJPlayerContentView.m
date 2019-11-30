@@ -457,7 +457,7 @@
     self.playerHandle.playUrl = videoUrl;
     
     if ([self.layer.sublayers containsObject:self.playerHandle.playerLayer]) {
-       
+        
         [self.playerHandle nextWithUrl:videoUrl];
         
         [self.playerHandle play];
@@ -479,7 +479,7 @@
         [self screenStatusChangeLayoutAdjust:strIsFullScreen.intValue];
     } else if ([keyPath isEqualToString:@"isPlaying"]) {
         NSString *isPlaying = [change objectForKey:NSKeyValueChangeNewKey];
-        StartLog(@"%@", isPlaying);
+//        StartLog(@"%@", isPlaying);
         if (isPlaying.integerValue) {
             
         }

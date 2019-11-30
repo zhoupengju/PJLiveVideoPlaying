@@ -26,6 +26,9 @@
     [self mainPageStartLogicManger];
     
     [self.appdelegate.window makeKeyAndVisible];
+    
+    //2. 主界面启动逻辑管理
+    [self mainPageSetAttributeLogicManger];
 }
 
 #pragma mark - 主界面启动逻辑管理 备注: 有引导页面的逻辑
@@ -55,6 +58,10 @@
     PJLiveVideoMainTabBarManger *tabBarManger = [[PJLiveVideoMainTabBarManger alloc] init];
     PJTabBarBaseController *tabBarVc = [tabBarManger settingTabBar];
     self.appdelegate.window.rootViewController = tabBarVc;
+}
+
+- (void)mainPageSetAttributeLogicManger {
+    
 }
 
 @end

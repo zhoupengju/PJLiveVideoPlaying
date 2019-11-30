@@ -15,6 +15,7 @@
 #import "PJHelperBlocksKit.h"
 #import "UIView+MBLayout.h"
 #import "UIImage+Extension.h"
+#import "UIButton+WebCache.h"
 #import "UIBarButtonItem+Extension.h"
 #import "NSString+PJVideoPlayingTimer.h"
 #import "PJVideoPlayingController+RoTransition.h"

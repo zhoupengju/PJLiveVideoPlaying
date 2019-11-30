@@ -20,30 +20,36 @@
     if (self) {
         
         //1. 添加通知
-        [self addNotification];
+//        [self addNotification];
     }
     return self;
 }
 
 #pragma mark - 添加通知
-- (void)addNotification {
-    // app退到后台
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground) name:UIApplicationWillResignActiveNotification object:nil];
-    // app进入前台
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterPlayGround) name:UIApplicationDidBecomeActiveNotification object:nil];
-}
+//- (void)addNotification {
+//    // app退到后台
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground) name:UIApplicationWillResignActiveNotification object:nil];
+//    // app进入前台
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterPlayGround) name:UIApplicationDidBecomeActiveNotification object:nil];
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
+//}
+//
+//// 应用退到后台
+//- (void)appDidEnterBackground {
+////    [self pause];
+//}
+//// 应用进入前台
+//- (void)appDidEnterPlayGround {
+//
+//}
+//
+//- (void)appWillResignActive {
+//
+//}
 
-// 应用退到后台
-- (void)appDidEnterBackground {
-    [self pause];
-}
-// 应用进入前台
-- (void)appDidEnterPlayGround {
-
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
+//- (void)dealloc {
+//    [[NSNotificationCenter defaultCenter]removeObserver:self];
+//}
  
 @end

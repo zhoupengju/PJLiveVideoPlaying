@@ -220,6 +220,7 @@ static inline NSString * backgroundImageOperationKeyForState(UIControlState stat
 #pragma mark - Private
 
 - (SDStateImageURLDictionary *)sd_imageURLStorage {
+
     SDStateImageURLDictionary *storage = objc_getAssociatedObject(self, &imageURLStorageKey);
     if (!storage) {
         storage = [NSMutableDictionary dictionary];
