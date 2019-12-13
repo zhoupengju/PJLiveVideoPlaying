@@ -16,7 +16,7 @@
 @property (nonatomic, strong) PJSDKIntegrationManger *mangerSDK; //!<负责第三方SDK的集成管理
 
 @end
-
+/Users/zhoupengju/Downloads/Git 目录/PJLiveVideoPlaying/PJLiveVideoPlaying/PJLiveVideoPlaying/AppDelegate.m
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
